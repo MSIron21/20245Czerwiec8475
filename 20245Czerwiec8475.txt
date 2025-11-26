@@ -1,0 +1,24 @@
+2025 Czerwiec 7.5
+
+SELECT Wizyty.id_klienta
+FROM Salon INNER JOIN (Fryzjerzy INNER JOIN Wizyty ON
+Fryzjerzy.id_fryzjera = Wizyty.id_fryzjera) ON Salony.id_salonu =
+Fryzjerzy.id_salonu
+WHERE (((Salony.nazwa_salonu)="Magnolia"))
+GROUP BY Wizyty.id_klienta;Więcej arkuszy znajdziesz na stronie: arkusze.pl
+Zasady oceniania rozwiązań zadań
+Strona 11 z 11
+SELECT DISTINCT Wizyty.id_klienta
+FROM Salony INNER JOIN (Fryzjerzy INNER JOIN Wizyty ON
+Fryzjerzy.id_fryzjera = Wizyty.id_fryzjera) ON Salony.id_salonu =
+Fryzjerzy.id_salonu
+WHERE (((Salonynazwa_salonu)="Magnolia"));
+
+
+2024 Czerwiec 8.4
+
+select WIZYTY.pesel
+from PACJENCI
+join WIZYTY on PACJENCI.pesel = WIZYTY.pesel
+join PUNKT_SZCZEPIEN on WIZYTY.kod_punktu = PUNKT_SZCZEPIEN.kod_punktu
+where PACJENCI.wojewodztwo_pacjenta != PUNKT_SZCZEPIEN.wojwództwo_punktu;
